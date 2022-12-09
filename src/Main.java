@@ -3,8 +3,11 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
+        task5();
 
     }
+
     public static void task1() {
         System.out.println("Задача 1");
         int contribution = 15_000;
@@ -12,26 +15,28 @@ public class Main {
         double percentagesInMonth = 0.01;
         int month = 0;
         while (total <= 2_459_000) {
-                total = total + contribution * percentagesInMonth;
-                total = total + contribution;
+            total = total + contribution * percentagesInMonth;
+            total = total + contribution;
             month = month + 1;
-                System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
-            }
+            System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
         }
-        public static void task2() {
+    }
+
+    public static void task2() {
         System.out.println("Задача 2");
         int i = 0;
         while (i < 10) {
             i = i + 1;
-                System.out.print(i + " ");
-            }
-            System.out.println();
-
-            for (int x = 10; x >= 1; x--) {
-                System.out.print(x + " ");
-            }
-            System.out.println();
+            System.out.print(i + " ");
         }
+        System.out.println();
+
+        for (int x = 10; x >= 1; x--) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
     public static void task3() {
         System.out.println("Задача 3");
         int population = 12_000_000;
@@ -41,8 +46,36 @@ public class Main {
             int birthRateInYears = population / 1000 * 17;
             int mortalityInYears = population / 1000 * 8;
             population = population + birthRateInYears - mortalityInYears;
-            System.out.println("Год "+ i +", численность населения составляет " + population);
+            System.out.println("Год " + i + ", численность населения составляет " + population);
         }
     }
 
+    public static void task4() {
+        System.out.println("Задача 4");
+        int contribution = 15_000;
+        double total = 0;
+        double percentagesInMonth = 0.07;
+        int month = 0;
+        while (total <= 12_000_000) {
+            total = total + contribution * percentagesInMonth;
+            total = total + contribution;
+            month = month + 1;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
+        }
+    }
+        public static void task5() {
+        System.out.println("Задача 5");
+            int contribution = 15_000;
+            double total = 0;
+            double percentagesInMonth = 0.07;
+            int month = 0;
+            while (total <= 12_000_000) {
+                total = total + contribution * percentagesInMonth;
+                total = total + contribution;
+                month = month + 1;
+                if (month % 6 == 0) {
+                    System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
+                }
+            }
+    }
 }
