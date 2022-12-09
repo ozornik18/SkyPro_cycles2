@@ -34,4 +34,15 @@ public class Main {
         }
     public static void task3() {
         System.out.println("Задача 3");
+        int population = 12_000_000;
+        int birthRate = 17;
+        int mortality = 8;
+        for (int i = 1; i <= 10; i++) {
+            int birthRateInYears = population / 1000 * 17;
+            int mortalityInYears = population / 1000 * 8;
+            population = population + birthRateInYears - mortalityInYears;
+            System.out.println("Год "+ i +", численность населения составляет " + population);
+        }
+    }
+
 }
