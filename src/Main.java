@@ -7,7 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
- //       task8();
+       task8();
     }
 
     public static void task1() {
@@ -110,4 +110,15 @@ public class Main {
         }
     }
 
+    public static void task8() {
+        System.out.println("Задача 8");
+        int years = 2022;
+        int startYear = years - 200;
+        int stopYear = years + 100;
+
+        for (int year = startYear; year <= stopYear; year++)
+            if (year % 79 == 0){
+                System.out.println(year);
+            }
+    }
 }
